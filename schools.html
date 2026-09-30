@@ -1,1 +1,1660 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Schools - Chikkanayakanahalli Taluk Educational Portal</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f4f7fb;color:#222}
+.header{background:#0b4f8a;color:#fff;padding:18px 5%;text-align:center}
+.header h1{margin:0;font-size:24px}
+.header p{margin:6px 0 0}
+nav{background:#073b67;text-align:center}
+nav a{display:inline-block;color:#fff;text-decoration:none;padding:13px 18px}
+nav a:hover{background:#0b4f8a}
+.hero{background:linear-gradient(135deg,#0b4f8a,#159957);color:#fff;text-align:center;padding:30px 15px}
+.hero h2{margin:0 0 8px}
+.container{width:94%;max-width:1200px;margin:25px auto}
+.tools{background:#fff;padding:18px;border-radius:10px;box-shadow:0 2px 10px #0001;margin-bottom:18px}
+input,select{padding:12px;border:1px solid #ccc;border-radius:7px;font-size:15px;margin:5px;max-width:100%}
+input{width:55%}
+.info{margin:10px 5px;color:#555}
+.table-wrap{overflow:auto;background:#fff;border-radius:10px;box-shadow:0 2px 10px #0001}
+table{width:100%;border-collapse:collapse;min-width:700px}
+th{background:#0b4f8a;color:#fff;position:sticky;top:0}
+th,td{padding:11px 10px;border-bottom:1px solid #ddd;text-align:left}
+tr:hover{background:#f1f7fc}
+footer{background:#073b67;color:#fff;text-align:center;padding:25px;margin-top:40px}
+@media(max-width:700px){input{width:100%} .header h1{font-size:18px}}
+</style>
+</head>
+<body>
+<header class="header">
+<h1>CHIKKANAYAKANAHALLI TALUK EDUCATIONAL PORTAL</h1>
+<p>ಚಿಕ್ಕನಾಯಕನಹಳ್ಳಿ ತಾಲ್ಲೂಕು ಶೈಕ್ಷಣಿಕ ಪೋರ್ಟಲ್</p>
+</header>
 
+<nav>
+<a href="index.html">🏠 Home</a>
+<a href="schools.html">🏫 Schools</a>
+<a href="index.html#teachers">👨‍🏫 Teacher Corner</a>
+<a href="index.html#students">👨‍🎓 Student Corner</a>
+</nav>
+
+<section class="hero">
+<h2>🏫 Chikkanayakanahalli Taluk Schools</h2>
+<p>ಚಿಕ್ಕನಾಯಕನಹಳ್ಳಿ Block — ಶಾಲೆಗಳ ಪಟ್ಟಿ</p>
+</section>
+
+<main class="container">
+<div class="tools">
+<input id="search" type="text" placeholder="Search School Name / Code / Cluster..." onkeyup="filterSchools()">
+<select id="cluster" onchange="filterSchools()">
+<option value="">All Clusters</option>
+</select>
+<div class="info"><b>Total Schools: 311</b> &nbsp; | &nbsp; Showing: <span id="count">311</span></div>
+</div>
+
+<div class="table-wrap">
+<table id="schoolTable">
+<thead>
+<tr><th>Sl. No.</th><th>Cluster</th><th>School Code</th><th>School Name</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>BARAGUR</td>
+<td>29180108201</td>
+<td>GHPS ANKASANDRA</td>
+</tr><tr>
+<td>2</td>
+<td>BARAGUR</td>
+<td>29180107801</td>
+<td>GHPS BARGUR</td>
+</tr><tr>
+<td>3</td>
+<td>BARAGUR</td>
+<td>29180108501</td>
+<td>GHPS HOSAKERE</td>
+</tr><tr>
+<td>4</td>
+<td>BARAGUR</td>
+<td>29180107902</td>
+<td>GHPS THIMMALAPURA TANDYA</td>
+</tr><tr>
+<td>5</td>
+<td>BARAGUR</td>
+<td>29180108001</td>
+<td>GHPS UPPARAHALLI</td>
+</tr><tr>
+<td>6</td>
+<td>BARAGUR</td>
+<td>29180107802</td>
+<td>GHS COMPOSITE BARAGUR</td>
+</tr><tr>
+<td>7</td>
+<td>BARAGUR</td>
+<td>29180108202</td>
+<td>GLPS ANKASANDRA GOLLARAHATTI</td>
+</tr><tr>
+<td>8</td>
+<td>BARAGUR</td>
+<td>29180108401</td>
+<td>GLPS BANGARAGERE</td>
+</tr><tr>
+<td>9</td>
+<td>BARAGUR</td>
+<td>29180109502</td>
+<td>GLPS GADDAGERA HATTI</td>
+</tr><tr>
+<td>10</td>
+<td>BARAGUR</td>
+<td>29180107901</td>
+<td>GLPS OTIKERE</td>
+</tr><tr>
+<td>11</td>
+<td>BARAGUR</td>
+<td>29180109501</td>
+<td>GLPS RANGENA HALLI</td>
+</tr><tr>
+<td>12</td>
+<td>BARAGUR</td>
+<td>29180108002</td>
+<td>GLPS UPPARAHALLI GOLLARAHATTI</td>
+</tr><tr>
+<td>13</td>
+<td>BARAGUR</td>
+<td>29180111602</td>
+<td>GOVT. LOWER PRIMARY SCHOOL YAREKATTE ( BARAGUR)</td>
+</tr><tr>
+<td>14</td>
+<td>BARAKNAALU</td>
+<td>29180121001</td>
+<td>GHPS BADAKEGUDLU</td>
+</tr><tr>
+<td>15</td>
+<td>BARAKNAALU</td>
+<td>29180102301</td>
+<td>GHPS BARAKANALU</td>
+</tr><tr>
+<td>16</td>
+<td>BARAKNAALU</td>
+<td>29180105002</td>
+<td>GHPS POCHKATTE TANDYA</td>
+</tr><tr>
+<td>17</td>
+<td>BARAKNAALU</td>
+<td>29180102201</td>
+<td>GHPS SANGENAHALLI</td>
+</tr><tr>
+<td>18</td>
+<td>BARAKNAALU</td>
+<td>29180121003</td>
+<td>GHS COMPOSITE BADAKEGUDLU</td>
+</tr><tr>
+<td>19</td>
+<td>BARAKNAALU</td>
+<td>29180102401</td>
+<td>GLPS AGRAHARA</td>
+</tr><tr>
+<td>20</td>
+<td>BARAKNAALU</td>
+<td>29180121002</td>
+<td>GLPS BADAKEGUDLU BOVI COLONY</td>
+</tr><tr>
+<td>21</td>
+<td>BARAKNAALU</td>
+<td>29180102304</td>
+<td>GLPS BARAKANALU GOLLARAHATTI</td>
+</tr><tr>
+<td>22</td>
+<td>BARAKNAALU</td>
+<td>29180102303</td>
+<td>GLPS BARAKANALUHATTI</td>
+</tr><tr>
+<td>23</td>
+<td>BARAKNAALU</td>
+<td>29180102101</td>
+<td>GLPS HANDIGANADU</td>
+</tr><tr>
+<td>24</td>
+<td>BARAKNAALU</td>
+<td>29180121101</td>
+<td>GLPS MYLUKABBE</td>
+</tr><tr>
+<td>25</td>
+<td>BARAKNAALU</td>
+<td>29180107202</td>
+<td>GLPS MYLUKABBE BOVI COLONY(NEW)</td>
+</tr><tr>
+<td>26</td>
+<td>BARAKNAALU</td>
+<td>29180102601</td>
+<td>GLPS SHIDLAKATTE</td>
+</tr><tr>
+<td>27</td>
+<td>BARAKNAALU</td>
+<td>29180102102</td>
+<td>GLPS VADDARAHATTI</td>
+</tr><tr>
+<td>28</td>
+<td>BELAGULI</td>
+<td>29180108801</td>
+<td>GHPS BELAGULI</td>
+</tr><tr>
+<td>29</td>
+<td>BELAGULI</td>
+<td>29180108805</td>
+<td>GHPS GUBEHALLI</td>
+</tr><tr>
+<td>30</td>
+<td>BELAGULI</td>
+<td>29180109701</td>
+<td>GHPS NIRUVAGAL</td>
+</tr><tr>
+<td>31</td>
+<td>BELAGULI</td>
+<td>29180108806</td>
+<td>GHPS PAPANAKONA</td>
+</tr><tr>
+<td>32</td>
+<td>BELAGULI</td>
+<td>29180108808</td>
+<td>GHS GUBEHALLI</td>
+</tr><tr>
+<td>33</td>
+<td>BELAGULI</td>
+<td>29180108701</td>
+<td>GLPS DEVARAHALLI</td>
+</tr><tr>
+<td>34</td>
+<td>BELAGULI</td>
+<td>29180108803</td>
+<td>GLPS HALEHATTI</td>
+</tr><tr>
+<td>35</td>
+<td>BELAGULI</td>
+<td>29180108802</td>
+<td>GLPS HOSAHATTI</td>
+</tr><tr>
+<td>36</td>
+<td>BELAGULI</td>
+<td>29180109703</td>
+<td>GLPS LAMBANI TANDYA</td>
+</tr><tr>
+<td>37</td>
+<td>BELAGULI</td>
+<td>29180109702</td>
+<td>GLPS NIRUVAGAL G.HATTI</td>
+</tr><tr>
+<td>38</td>
+<td>BELAGULI</td>
+<td>29180108804</td>
+<td>GLPS RANGAPURA</td>
+</tr><tr>
+<td>39</td>
+<td>BELAGULI</td>
+<td>29180108601</td>
+<td>GLPS TARIKATTE</td>
+</tr><tr>
+<td>40</td>
+<td>C N HALLI (URDU)</td>
+<td>29180117501</td>
+<td>GHPS URDU C N HALLI Ward-1 (U)</td>
+</tr><tr>
+<td>41</td>
+<td>C N HALLI (URDU)</td>
+<td>29180117802</td>
+<td>GLPS URDU BASAVESHWARNAGAR Ward-4 (U)</td>
+</tr><tr>
+<td>42</td>
+<td>C N HALLI (URDU)</td>
+<td>29180118804</td>
+<td>GLPS URDU BOYS Ward-14 (U)</td>
+</tr><tr>
+<td>43</td>
+<td>C N HALLI (URDU)</td>
+<td>29180111802</td>
+<td>GLPS URDU MUDDENAHALLI (U)</td>
+</tr><tr>
+<td>44</td>
+<td>C N HALLI (URDU)</td>
+<td>29180121505</td>
+<td>GLPS URDU THIMMANAHALLI (U)</td>
+</tr><tr>
+<td>45</td>
+<td>C N HALLI PATNA</td>
+<td>29180117601</td>
+<td>GHPS JOGI HALLI C NHALLI Ward-2</td>
+</tr><tr>
+<td>46</td>
+<td>C N HALLI PATNA</td>
+<td>29180118801</td>
+<td>GHPS KALAMMA GUDI Ward-14</td>
+</tr><tr>
+<td>47</td>
+<td>C N HALLI PATNA</td>
+<td>29180117804</td>
+<td>GHPS KURUBARAHALLI Ward-22</td>
+</tr><tr>
+<td>48</td>
+<td>C N HALLI PATNA</td>
+<td>29180118805</td>
+<td>GHPS REVANNA MUTT Ward-14</td>
+</tr><tr>
+<td>49</td>
+<td>C N HALLI PATNA</td>
+<td>29180117604</td>
+<td>GHS C N HALLI Ward-2</td>
+</tr><tr>
+<td>50</td>
+<td>C N HALLI PATNA</td>
+<td>29180117801</td>
+<td>GLPS BASAVESHWARNAGAR Ward-4</td>
+</tr><tr>
+<td>51</td>
+<td>C N HALLI PATNA</td>
+<td>29180118806</td>
+<td>GLPS NEER BAAGILU ROAD Ward-14</td>
+</tr><tr>
+<td>52</td>
+<td>C N HALLI PATNA</td>
+<td>29180119602</td>
+<td>GLPS SHUKRAVARADA BAAGILU Ward-22</td>
+</tr><tr>
+<td>53</td>
+<td>C N HALLI PATNA</td>
+<td>29180117906</td>
+<td>GMHPS C N HALLI Ward-5</td>
+</tr><tr>
+<td>54</td>
+<td>C N HALLI PATNA</td>
+<td>29180118602</td>
+<td>GMHPS GIRLS HALIKAR BEEDI Ward-12</td>
+</tr><tr>
+<td>55</td>
+<td>C N HALLI PATNA</td>
+<td>29180119202</td>
+<td>GMHPS KURUBARA SHRENI Ward-18</td>
+</tr><tr>
+<td>56</td>
+<td>CHIKKABIDARE</td>
+<td>29180102701</td>
+<td>GHPS AVALAGERE</td>
+</tr><tr>
+<td>57</td>
+<td>CHIKKABIDARE</td>
+<td>29180105101</td>
+<td>GHPS BALLE KATTE</td>
+</tr><tr>
+<td>58</td>
+<td>CHIKKABIDARE</td>
+<td>29180123102</td>
+<td>GHPS CHIKKABIDARE</td>
+</tr><tr>
+<td>59</td>
+<td>CHIKKABIDARE</td>
+<td>29180101701</td>
+<td>GHPS DODDABIDARE</td>
+</tr><tr>
+<td>60</td>
+<td>CHIKKABIDARE</td>
+<td>29180105103</td>
+<td>GLPS BALLE KATTE TANDYA</td>
+</tr><tr>
+<td>61</td>
+<td>CHIKKABIDARE</td>
+<td>29180102001</td>
+<td>GLPS BHYRAPURA</td>
+</tr><tr>
+<td>62</td>
+<td>CHIKKABIDARE</td>
+<td>29180102002</td>
+<td>GLPS BHYRAPURA THANDYA</td>
+</tr><tr>
+<td>63</td>
+<td>CHIKKABIDARE</td>
+<td>29180101702</td>
+<td>GLPS HALE LAMBANI TANDYA</td>
+</tr><tr>
+<td>64</td>
+<td>CHIKKABIDARE</td>
+<td>29180101704</td>
+<td>GLPS HOSA LAMBANI THANDYA</td>
+</tr><tr>
+<td>65</td>
+<td>CHIKKABIDARE</td>
+<td>29180101901</td>
+<td>GLPS KALLAHALLI</td>
+</tr><tr>
+<td>66</td>
+<td>CHIKKABIDARE</td>
+<td>29180101801</td>
+<td>GLPS KODIHALLI</td>
+</tr><tr>
+<td>67</td>
+<td>CHIKKABIDARE</td>
+<td>29180105001</td>
+<td>GLPS POCHAKATTE</td>
+</tr><tr>
+<td>68</td>
+<td>DASUDI</td>
+<td>29180120303</td>
+<td>GHPS BALLAPPANAHATTI</td>
+</tr><tr>
+<td>69</td>
+<td>DASUDI</td>
+<td>29180120501</td>
+<td>GHPS DABBAGUNTE</td>
+</tr><tr>
+<td>70</td>
+<td>DASUDI</td>
+<td>29180120301</td>
+<td>GHPS DASUDI</td>
+</tr><tr>
+<td>71</td>
+<td>DASUDI</td>
+<td>29180120402</td>
+<td>GHPS MARENADU PALYA</td>
+</tr><tr>
+<td>72</td>
+<td>DASUDI</td>
+<td>29180120309</td>
+<td>GHS DASUDI</td>
+</tr><tr>
+<td>73</td>
+<td>DASUDI</td>
+<td>29180120304</td>
+<td>GLPS CHITRADEVARAHATTI</td>
+</tr><tr>
+<td>74</td>
+<td>DASUDI</td>
+<td>29180120305</td>
+<td>GLPS EMMEKARIKEHATTI</td>
+</tr><tr>
+<td>75</td>
+<td>DASUDI</td>
+<td>29180120302</td>
+<td>GLPS HUMLANAYAKANATHANDYA</td>
+</tr><tr>
+<td>76</td>
+<td>DASUDI</td>
+<td>29180120403</td>
+<td>GLPS KAREBALLAPPANA HATTI</td>
+</tr><tr>
+<td>77</td>
+<td>DASUDI</td>
+<td>29180120502</td>
+<td>GLPS MARATIPALYA</td>
+</tr><tr>
+<td>78</td>
+<td>DASUDI</td>
+<td>29180120401</td>
+<td>GLPS MARENADU</td>
+</tr><tr>
+<td>79</td>
+<td>DASUDI</td>
+<td>29180120503</td>
+<td>GOVT. HIGH SCHOOL DABBAGUNTE</td>
+</tr><tr>
+<td>80</td>
+<td>DODDENNEGERE</td>
+<td>29180104001</td>
+<td>GHPS BOMMENA HALLI</td>
+</tr><tr>
+<td>81</td>
+<td>DODDENNEGERE</td>
+<td>29180103501</td>
+<td>GHPS DINKANA HALLI</td>
+</tr><tr>
+<td>82</td>
+<td>DODDENNEGERE</td>
+<td>29180103601</td>
+<td>GHPS DODDENNEGERE</td>
+</tr><tr>
+<td>83</td>
+<td>DODDENNEGERE</td>
+<td>29180104201</td>
+<td>GHPS KIDUKANA HALLI</td>
+</tr><tr>
+<td>84</td>
+<td>DODDENNEGERE</td>
+<td>29180103801</td>
+<td>GHPS NADUVANA HALLI</td>
+</tr><tr>
+<td>85</td>
+<td>DODDENNEGERE</td>
+<td>29180103702</td>
+<td>GLPS ARALIKERE</td>
+</tr><tr>
+<td>86</td>
+<td>DODDENNEGERE</td>
+<td>29180103901</td>
+<td>GLPS BANNI KERE</td>
+</tr><tr>
+<td>87</td>
+<td>DODDENNEGERE</td>
+<td>29180103701</td>
+<td>GLPS CHIKKENEGERE</td>
+</tr><tr>
+<td>88</td>
+<td>DODDENNEGERE</td>
+<td>29180104101</td>
+<td>GLPS DODDA HULLENA HALLI</td>
+</tr><tr>
+<td>89</td>
+<td>DODDENNEGERE</td>
+<td>29180103605</td>
+<td>GLPS DODDENNEGERE VRUTTA</td>
+</tr><tr>
+<td>90</td>
+<td>DODDENNEGERE</td>
+<td>29180103602</td>
+<td>GLPS H M KAVAL</td>
+</tr><tr>
+<td>91</td>
+<td>DODDENNEGERE</td>
+<td>29180103303</td>
+<td>GLPS HANUMANTHPURA</td>
+</tr><tr>
+<td>92</td>
+<td>DODDENNEGERE</td>
+<td>29180103802</td>
+<td>GLPS NADUVANAHALLI G.HATTI</td>
+</tr><tr>
+<td>93</td>
+<td>DODDENNEGERE</td>
+<td>29180103604</td>
+<td>GLPS UPPINA KATTE</td>
+</tr><tr>
+<td>94</td>
+<td>GANADAALU</td>
+<td>29180123601</td>
+<td>GHPS GANADALU GOLLARAHATTI</td>
+</tr><tr>
+<td>95</td>
+<td>GANADAALU</td>
+<td>29180105601</td>
+<td>GHPS GANDAALU</td>
+</tr><tr>
+<td>96</td>
+<td>GANADAALU</td>
+<td>29180105801</td>
+<td>GHPS GURUVAPURA</td>
+</tr><tr>
+<td>97</td>
+<td>GANADAALU</td>
+<td>29180105701</td>
+<td>GHPS H.MELANAHALLI</td>
+</tr><tr>
+<td>98</td>
+<td>GANADAALU</td>
+<td>29180106201</td>
+<td>GHPS KAMPANA HALLI</td>
+</tr><tr>
+<td>99</td>
+<td>GANADAALU</td>
+<td>29180106001</td>
+<td>GHPS YAGACHIHALLI</td>
+</tr><tr>
+<td>100</td>
+<td>GANADAALU</td>
+<td>29180106202</td>
+<td>GLPS ANJANEYA SWAMY TEMPLE KAMPANAHALLI</td>
+</tr><tr>
+<td>101</td>
+<td>GANADAALU</td>
+<td>29180105501</td>
+<td>GLPS GOWDAGERE</td>
+</tr><tr>
+<td>102</td>
+<td>GANADAALU</td>
+<td>29180106203</td>
+<td>GLPS KAAREHALLI</td>
+</tr><tr>
+<td>103</td>
+<td>GANADAALU</td>
+<td>29180106401</td>
+<td>GLPS KURIHATTI</td>
+</tr><tr>
+<td>104</td>
+<td>GANADAALU</td>
+<td>29180106101</td>
+<td>GLPS MARUHOLE</td>
+</tr><tr>
+<td>105</td>
+<td>GODEKERE</td>
+<td>29180116901</td>
+<td>GHPS HONNEBAAGI</td>
+</tr><tr>
+<td>106</td>
+<td>GODEKERE</td>
+<td>29180115801</td>
+<td>GHPS SOMANA HALLI</td>
+</tr><tr>
+<td>107</td>
+<td>GODEKERE</td>
+<td>29180115901</td>
+<td>GHPS SONDENA HALLI</td>
+</tr><tr>
+<td>108</td>
+<td>GODEKERE</td>
+<td>29180115706</td>
+<td>GJC GODEKERE</td>
+</tr><tr>
+<td>109</td>
+<td>GODEKERE</td>
+<td>29180115501</td>
+<td>GLPS BAGGANA HALLI</td>
+</tr><tr>
+<td>110</td>
+<td>GODEKERE</td>
+<td>29180115602</td>
+<td>GLPS BANADEVRA HATTI</td>
+</tr><tr>
+<td>111</td>
+<td>GODEKERE</td>
+<td>29180117001</td>
+<td>GLPS BULLENA HALLI</td>
+</tr><tr>
+<td>112</td>
+<td>GODEKERE</td>
+<td>29180115702</td>
+<td>GLPS GODEKERE GOLLARAHATTI</td>
+</tr><tr>
+<td>113</td>
+<td>GODEKERE</td>
+<td>29180117401</td>
+<td>GLPS KADENA HALLI</td>
+</tr><tr>
+<td>114</td>
+<td>GODEKERE</td>
+<td>29180115601</td>
+<td>GLPS NADUVINA HALLI</td>
+</tr><tr>
+<td>115</td>
+<td>GODEKERE</td>
+<td>29180115402</td>
+<td>GLPS TARABENA HALI BOVI COLONY</td>
+</tr><tr>
+<td>116</td>
+<td>GODEKERE</td>
+<td>29180115701</td>
+<td>GMHPS GODEKERE</td>
+</tr><tr>
+<td>117</td>
+<td>HANDANAKERE</td>
+<td>29180100701</td>
+<td>GHPS CHOWLAKATTE</td>
+</tr><tr>
+<td>118</td>
+<td>HANDANAKERE</td>
+<td>29180100202</td>
+<td>GHPS KENGALAPURA HATTI</td>
+</tr><tr>
+<td>119</td>
+<td>HANDANAKERE</td>
+<td>29180100301</td>
+<td>GHPS RAMGHATTA</td>
+</tr><tr>
+<td>120</td>
+<td>HANDANAKERE</td>
+<td>29180101601</td>
+<td>GHPS SABBENAHALLI</td>
+</tr><tr>
+<td>121</td>
+<td>HANDANAKERE</td>
+<td>29180100501</td>
+<td>GLPS HALLITIMMALAPURA</td>
+</tr><tr>
+<td>122</td>
+<td>HANDANAKERE</td>
+<td>29180101003</td>
+<td>GLPS HARENAHALLI GOLLARAHATTI</td>
+</tr><tr>
+<td>123</td>
+<td>HANDANAKERE</td>
+<td>29180100801</td>
+<td>GLPS HONNASHETTYHALLI</td>
+</tr><tr>
+<td>124</td>
+<td>HANDANAKERE</td>
+<td>29180100601</td>
+<td>GLPS HUCCHANAHALLI</td>
+</tr><tr>
+<td>125</td>
+<td>HANDANAKERE</td>
+<td>29180100203</td>
+<td>GLPS NAYAKARA PALYA</td>
+</tr><tr>
+<td>126</td>
+<td>HANDANAKERE</td>
+<td>29180100401</td>
+<td>GLPS PURADAKATTE</td>
+</tr><tr>
+<td>127</td>
+<td>HANDANAKERE</td>
+<td>29180100302</td>
+<td>GLPS TAKKALUPALYA</td>
+</tr><tr>
+<td>128</td>
+<td>HANDANAKERE</td>
+<td>29180100101</td>
+<td>GMHPS HANDANKERE</td>
+</tr><tr>
+<td>129</td>
+<td>HOYSALA KATTE</td>
+<td>29180120201</td>
+<td>GHPS BELLARA(RMSA)</td>
+</tr><tr>
+<td>130</td>
+<td>HOYSALA KATTE</td>
+<td>29180119801</td>
+<td>GHPS HOYSAKATTE</td>
+</tr><tr>
+<td>131</td>
+<td>HOYSALA KATTE</td>
+<td>29180120001</td>
+<td>GHPS KALLENAHALLI</td>
+</tr><tr>
+<td>132</td>
+<td>HOYSALA KATTE</td>
+<td>29180119802</td>
+<td>GHPS LAKKENAHALLI</td>
+</tr><tr>
+<td>133</td>
+<td>HOYSALA KATTE</td>
+<td>29180120101</td>
+<td>GHPS NULENURU</td>
+</tr><tr>
+<td>134</td>
+<td>HOYSALA KATTE</td>
+<td>29180119902</td>
+<td>GJC BORANAKANIVE</td>
+</tr><tr>
+<td>135</td>
+<td>HOYSALA KATTE</td>
+<td>29180120203</td>
+<td>GLPS AMBARAPURA</td>
+</tr><tr>
+<td>136</td>
+<td>HOYSALA KATTE</td>
+<td>29180120202</td>
+<td>GLPS BELLARADA GOLLRAHATTI</td>
+</tr><tr>
+<td>137</td>
+<td>HOYSALA KATTE</td>
+<td>29180119804</td>
+<td>GLPS BENCHI HATTI</td>
+</tr><tr>
+<td>138</td>
+<td>HOYSALA KATTE</td>
+<td>29180119901</td>
+<td>GLPS BORANAKANIVE</td>
+</tr><tr>
+<td>139</td>
+<td>HOYSALA KATTE</td>
+<td>29180105603</td>
+<td>GLPS GEMANAYAKANA TANDYA</td>
+</tr><tr>
+<td>140</td>
+<td>HOYSALA KATTE</td>
+<td>29180120204</td>
+<td>GLPS HOSA GOLLARA HATTI</td>
+</tr><tr>
+<td>141</td>
+<td>HOYSALA KATTE</td>
+<td>29180119803</td>
+<td>GLPS THIMMAPPNAHATTI</td>
+</tr><tr>
+<td>142</td>
+<td>HULIYAARU</td>
+<td>29180104315</td>
+<td>GHPGS HULIYAR</td>
+</tr><tr>
+<td>143</td>
+<td>HULIYAARU</td>
+<td>29180104312</td>
+<td>GHPS SOMMAJJANAPALYA</td>
+</tr><tr>
+<td>144</td>
+<td>HULIYAARU</td>
+<td>29180105301</td>
+<td>GLPS BARADALE PALYA</td>
+</tr><tr>
+<td>145</td>
+<td>HULIYAARU</td>
+<td>29180105305</td>
+<td>GLPS HONNAIAHNA PALYA</td>
+</tr><tr>
+<td>146</td>
+<td>HULIYAARU</td>
+<td>29180105502</td>
+<td>GLPS K C PALYA</td>
+</tr><tr>
+<td>147</td>
+<td>HULIYAARU</td>
+<td>29180105307</td>
+<td>GLPS KENKERE GOLLARAHATTI</td>
+</tr><tr>
+<td>148</td>
+<td>HULIYAARU</td>
+<td>29180104313</td>
+<td>GLPS LINGAPPANA PALYA</td>
+</tr><tr>
+<td>149</td>
+<td>HULIYAARU</td>
+<td>29180104601</td>
+<td>GLPS TORESURAGONDANA HALLI</td>
+</tr><tr>
+<td>150</td>
+<td>HULIYAARU</td>
+<td>29180104314</td>
+<td>GLPS VALAGERE HALLI</td>
+</tr><tr>
+<td>151</td>
+<td>HULIYAARU</td>
+<td>29180105304</td>
+<td>GMHPS KENKERE</td>
+</tr><tr>
+<td>152</td>
+<td>HULIYAARU</td>
+<td>29180105308</td>
+<td>GOVT COMPOSITE KENKERE</td>
+</tr><tr>
+<td>153</td>
+<td>HULIYAARU</td>
+<td>29180104301</td>
+<td>KARNATAKA PUBLIC SCHOOLS GMHPS BOYS HULIYAR</td>
+</tr><tr>
+<td>154</td>
+<td>HULIYAARU</td>
+<td>29180105306</td>
+<td>KARNATAKA PUBLIC SCHOOLS KARNATAKA PUBLIC SCHOOL HULIYAR KENKERE</td>
+</tr><tr>
+<td>155</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104303</td>
+<td>GHPS URDU HULIYAR (U)</td>
+</tr><tr>
+<td>156</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104305</td>
+<td>GHPS URDU INDIRANAGAR (U)</td>
+</tr><tr>
+<td>157</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180106102</td>
+<td>GHPS URDU KHASIM SAB PALYA (U)</td>
+</tr><tr>
+<td>158</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180123901</td>
+<td>GHPS URDU YAAKUB SAB PALYA (U)</td>
+</tr><tr>
+<td>159</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104328</td>
+<td>GHS URDU HULIYAR (U)</td>
+</tr><tr>
+<td>160</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104803</td>
+<td>GLPS URDU ABUB SAB PALYA (U)</td>
+</tr><tr>
+<td>161</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104304</td>
+<td>GLPS URDU AJAD NAGAR HULIYAR (U)</td>
+</tr><tr>
+<td>162</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180103402</td>
+<td>GLPS URDU BARAGIHALLI (U)</td>
+</tr><tr>
+<td>163</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180105503</td>
+<td>GLPS URDU KAMPANAHALLI (U)</td>
+</tr><tr>
+<td>164</td>
+<td>HULIYAARU (URDU)</td>
+<td>29180104602</td>
+<td>GLPS URDU SYEDSABPALYA (U)</td>
+</tr><tr>
+<td>165</td>
+<td>J C PURA</td>
+<td>29180116701</td>
+<td>GHPS AGASARA HALLI</td>
+</tr><tr>
+<td>166</td>
+<td>J C PURA</td>
+<td>29180116001</td>
+<td>GHPS J C PURA</td>
+</tr><tr>
+<td>167</td>
+<td>J C PURA</td>
+<td>29180116601</td>
+<td>GHPS MALAGONDANA HALLI</td>
+</tr><tr>
+<td>168</td>
+<td>J C PURA</td>
+<td>29180116801</td>
+<td>GHPS SASALU</td>
+</tr><tr>
+<td>169</td>
+<td>J C PURA</td>
+<td>29180116804</td>
+<td>GHS COMPOSITE SASALU</td>
+</tr><tr>
+<td>170</td>
+<td>J C PURA</td>
+<td>29180116003</td>
+<td>GHS J C PURA</td>
+</tr><tr>
+<td>171</td>
+<td>J C PURA</td>
+<td>29180116201</td>
+<td>GLPS BYADARA HALLI</td>
+</tr><tr>
+<td>172</td>
+<td>J C PURA</td>
+<td>29180116101</td>
+<td>GLPS HALUGONA</td>
+</tr><tr>
+<td>173</td>
+<td>J C PURA</td>
+<td>29180116301</td>
+<td>GLPS KANTALAGERE</td>
+</tr><tr>
+<td>174</td>
+<td>J C PURA</td>
+<td>29180116802</td>
+<td>GLPS MASTHAIAHNA PALYA</td>
+</tr><tr>
+<td>175</td>
+<td>J C PURA</td>
+<td>29180116803</td>
+<td>GLPS SASALU GOLLARAHATTI</td>
+</tr><tr>
+<td>176</td>
+<td>J C PURA</td>
+<td>29180116002</td>
+<td>GLPS VADDARAHATTI</td>
+</tr><tr>
+<td>177</td>
+<td>KANDHIKERE</td>
+<td>29180102501</td>
+<td>GHPS DODDABELAVAADI</td>
+</tr><tr>
+<td>178</td>
+<td>KANDHIKERE</td>
+<td>29180121401</td>
+<td>GHPS GOWRASAGARA</td>
+</tr><tr>
+<td>179</td>
+<td>KANDHIKERE</td>
+<td>29180120701</td>
+<td>GHPS SADARAHALLI</td>
+</tr><tr>
+<td>180</td>
+<td>KANDHIKERE</td>
+<td>29180120801</td>
+<td>GHPS SALKATTE</td>
+</tr><tr>
+<td>181</td>
+<td>KANDHIKERE</td>
+<td>29180120804</td>
+<td>GLPS AJJAYANAPALYA</td>
+</tr><tr>
+<td>182</td>
+<td>KANDHIKERE</td>
+<td>29180121301</td>
+<td>GLPS BHIRALINGANAHALLI</td>
+</tr><tr>
+<td>183</td>
+<td>KANDHIKERE</td>
+<td>29180124901</td>
+<td>GLPS GOTIGENAHLLI</td>
+</tr><tr>
+<td>184</td>
+<td>KANDHIKERE</td>
+<td>29180120702</td>
+<td>GLPS KAMANAHALLI</td>
+</tr><tr>
+<td>185</td>
+<td>KANDHIKERE</td>
+<td>29180111901</td>
+<td>GLPS LAKMENA HALLI</td>
+</tr><tr>
+<td>186</td>
+<td>KANDHIKERE</td>
+<td>29180121201</td>
+<td>GLPS MALLENAHALLI</td>
+</tr><tr>
+<td>187</td>
+<td>KANDHIKERE</td>
+<td>29180121402</td>
+<td>GLPS RAMAPPANAHATTI</td>
+</tr><tr>
+<td>188</td>
+<td>KANDHIKERE</td>
+<td>29180120803</td>
+<td>GLPS SALKATTE HARIJANA COLONY</td>
+</tr><tr>
+<td>189</td>
+<td>KANDHIKERE</td>
+<td>29180120601</td>
+<td>GMHPS KANDIKERE</td>
+</tr><tr>
+<td>190</td>
+<td>KUPPURU</td>
+<td>29180112901</td>
+<td>GHPS AANEKATTE</td>
+</tr><tr>
+<td>191</td>
+<td>KUPPURU</td>
+<td>29180113001</td>
+<td>GHPS ARALIKERE</td>
+</tr><tr>
+<td>192</td>
+<td>KUPPURU</td>
+<td>29180114601</td>
+<td>GHPS KUPPUR</td>
+</tr><tr>
+<td>193</td>
+<td>KUPPURU</td>
+<td>29180112801</td>
+<td>GHPS NAVILE</td>
+</tr><tr>
+<td>194</td>
+<td>KUPPURU</td>
+<td>29180114801</td>
+<td>GHPS TAMMADI HALLI</td>
+</tr><tr>
+<td>195</td>
+<td>KUPPURU</td>
+<td>29180115201</td>
+<td>GLPS ABUJI HALLI</td>
+</tr><tr>
+<td>196</td>
+<td>KUPPURU</td>
+<td>29180114701</td>
+<td>GLPS BENAKANA KATTE</td>
+</tr><tr>
+<td>197</td>
+<td>KUPPURU</td>
+<td>29180107001</td>
+<td>GLPS BEVINAHALLI</td>
+</tr><tr>
+<td>198</td>
+<td>KUPPURU</td>
+<td>29180107007</td>
+<td>GLPS BEVINAHALLI G HATTI</td>
+</tr><tr>
+<td>199</td>
+<td>KUPPURU</td>
+<td>29180107002</td>
+<td>GLPS BEVINAHALLI TEMLE</td>
+</tr><tr>
+<td>200</td>
+<td>KUPPURU</td>
+<td>29180117301</td>
+<td>GLPS DIBBADA HALLI</td>
+</tr><tr>
+<td>201</td>
+<td>KUPPURU</td>
+<td>29180114702</td>
+<td>GLPS GUDDADA HATTI</td>
+</tr><tr>
+<td>202</td>
+<td>KUPPURU</td>
+<td>29180114901</td>
+<td>GLPS MANCHA SANDRA</td>
+</tr><tr>
+<td>203</td>
+<td>M MANTAPA</td>
+<td>29180119701</td>
+<td>GHPS DABBEGHATTA Ward-23</td>
+</tr><tr>
+<td>204</td>
+<td>M MANTAPA</td>
+<td>29180122201</td>
+<td>GHPS M MANTAPA</td>
+</tr><tr>
+<td>205</td>
+<td>M MANTAPA</td>
+<td>29180113201</td>
+<td>GLPS BACHIHALLI</td>
+</tr><tr>
+<td>206</td>
+<td>M MANTAPA</td>
+<td>29180115302</td>
+<td>GLPS BALLENAHALLI A K COLONY</td>
+</tr><tr>
+<td>207</td>
+<td>M MANTAPA</td>
+<td>29180113501</td>
+<td>GLPS DUGADI HALLI</td>
+</tr><tr>
+<td>208</td>
+<td>M MANTAPA</td>
+<td>29180113302</td>
+<td>GLPS GANTIGANAPALYA</td>
+</tr><tr>
+<td>209</td>
+<td>M MANTAPA</td>
+<td>29180119702</td>
+<td>GLPS KALLENA HALLI Ward-23</td>
+</tr><tr>
+<td>210</td>
+<td>M MANTAPA</td>
+<td>29180106302</td>
+<td>GLPS KAREHALLI</td>
+</tr><tr>
+<td>211</td>
+<td>M MANTAPA</td>
+<td>29180117702</td>
+<td>GLPS KEDIGE HALLI Ward-3</td>
+</tr><tr>
+<td>212</td>
+<td>M MANTAPA</td>
+<td>29180113401</td>
+<td>GLPS KODALAAGARA</td>
+</tr><tr>
+<td>213</td>
+<td>MALIGEHALLI</td>
+<td>29180112101</td>
+<td>GHPS MALIGE HALLI</td>
+</tr><tr>
+<td>214</td>
+<td>MALIGEHALLI</td>
+<td>29180111801</td>
+<td>GHPS MUDDENAHALLI</td>
+</tr><tr>
+<td>215</td>
+<td>MALIGEHALLI</td>
+<td>29180112001</td>
+<td>GLPS AALADA KATTE</td>
+</tr><tr>
+<td>216</td>
+<td>MALIGEHALLI</td>
+<td>29180111804</td>
+<td>GLPS BYLAPPANA MATA</td>
+</tr><tr>
+<td>217</td>
+<td>MALIGEHALLI</td>
+<td>29180115101</td>
+<td>GLPS DIBBADA HALLI</td>
+</tr><tr>
+<td>218</td>
+<td>MALIGEHALLI</td>
+<td>29180117201</td>
+<td>GLPS HOSAHALLI</td>
+</tr><tr>
+<td>219</td>
+<td>MALIGEHALLI</td>
+<td>29180112401</td>
+<td>GLPS JODIKALLENA HALLI</td>
+</tr><tr>
+<td>220</td>
+<td>MALIGEHALLI</td>
+<td>29180111803</td>
+<td>GLPS KYATANAYAKANA HALLI</td>
+</tr><tr>
+<td>221</td>
+<td>MALIGEHALLI</td>
+<td>29180120901</td>
+<td>GLPS M H KAVALU</td>
+</tr><tr>
+<td>222</td>
+<td>MALIGEHALLI</td>
+<td>29180112601</td>
+<td>GLPS MARASANDRA</td>
+</tr><tr>
+<td>223</td>
+<td>MALIGEHALLI</td>
+<td>29180111805</td>
+<td>GLPS MUNIYAMMANAPALYA (NEW SCHOOL)</td>
+</tr><tr>
+<td>224</td>
+<td>MALIGEHALLI</td>
+<td>29180112702</td>
+<td>GLPS RAYAPPANA PALYA</td>
+</tr><tr>
+<td>225</td>
+<td>MALIGEHALLI</td>
+<td>29180120802</td>
+<td>GLPS SALKATTE THANDYA</td>
+</tr><tr>
+<td>226</td>
+<td>MALIGEHALLI</td>
+<td>29180112301</td>
+<td>GLPS SAVASHETTY HALLI</td>
+</tr><tr>
+<td>227</td>
+<td>MALLIGERE</td>
+<td>29180107603</td>
+<td>GHPS HOSUR</td>
+</tr><tr>
+<td>228</td>
+<td>MALLIGERE</td>
+<td>29180107601</td>
+<td>GHPS KAAMALAPURA</td>
+</tr><tr>
+<td>229</td>
+<td>MALLIGERE</td>
+<td>29180101301</td>
+<td>GHPS KANKERE</td>
+</tr><tr>
+<td>230</td>
+<td>MALLIGERE</td>
+<td>29180107401</td>
+<td>GHPS MALLIGERE</td>
+</tr><tr>
+<td>231</td>
+<td>MALLIGERE</td>
+<td>29180107605</td>
+<td>GHS COMPOSITE KAMALAPURA</td>
+</tr><tr>
+<td>232</td>
+<td>MALLIGERE</td>
+<td>29180101501</td>
+<td>GLPS BANDREHALLI</td>
+</tr><tr>
+<td>233</td>
+<td>MALLIGERE</td>
+<td>29180101502</td>
+<td>GLPS BANDREHALLI TANDYA</td>
+</tr><tr>
+<td>234</td>
+<td>MALLIGERE</td>
+<td>29180107501</td>
+<td>GLPS DAVANADA HOSAHALLI</td>
+</tr><tr>
+<td>235</td>
+<td>MALLIGERE</td>
+<td>29180107604</td>
+<td>GLPS HOSUR BOVICOLONY</td>
+</tr><tr>
+<td>236</td>
+<td>MALLIGERE</td>
+<td>29180107602</td>
+<td>GLPS KAAMALAPURA G HATTI</td>
+</tr><tr>
+<td>237</td>
+<td>MALLIGERE</td>
+<td>29180107403</td>
+<td>GLPS MALLIGERE G.HATTI</td>
+</tr><tr>
+<td>238</td>
+<td>MALLIGERE</td>
+<td>29180107402</td>
+<td>GLPS MYSURAPPANA PALYA</td>
+</tr><tr>
+<td>239</td>
+<td>MALLIGERE</td>
+<td>29180107404</td>
+<td>GLPS NAYAKANA HATTI</td>
+</tr><tr>
+<td>240</td>
+<td>MATHIGHATTA</td>
+<td>29180106501</td>
+<td>GHPS MATIGHATTA</td>
+</tr><tr>
+<td>241</td>
+<td>MATHIGHATTA</td>
+<td>29180107301</td>
+<td>GHPS SORALAMAAVU</td>
+</tr><tr>
+<td>242</td>
+<td>MATHIGHATTA</td>
+<td>29180106602</td>
+<td>GLPS ARALAKATTE</td>
+</tr><tr>
+<td>243</td>
+<td>MATHIGHATTA</td>
+<td>29180107101</td>
+<td>GLPS BELAGI HALLI</td>
+</tr><tr>
+<td>244</td>
+<td>MATHIGHATTA</td>
+<td>29180106506</td>
+<td>GLPS BHARANAPURA</td>
+</tr><tr>
+<td>245</td>
+<td>MATHIGHATTA</td>
+<td>29180106801</td>
+<td>GLPS CHATTASANDRA</td>
+</tr><tr>
+<td>246</td>
+<td>MATHIGHATTA</td>
+<td>29180106701</td>
+<td>GLPS DASIHALLI</td>
+</tr><tr>
+<td>247</td>
+<td>MATHIGHATTA</td>
+<td>29180106505</td>
+<td>GLPS GANDHINAGAR</td>
+</tr><tr>
+<td>248</td>
+<td>MATHIGHATTA</td>
+<td>29180106503</td>
+<td>GLPS KODIPALYA</td>
+</tr><tr>
+<td>249</td>
+<td>MATHIGHATTA</td>
+<td>29180106902</td>
+<td>GLPS M BEVINAHALLI BANJARAHATTI</td>
+</tr><tr>
+<td>250</td>
+<td>MATHIGHATTA</td>
+<td>29180106601</td>
+<td>GLPS MADAPURA</td>
+</tr><tr>
+<td>251</td>
+<td>MATHIGHATTA</td>
+<td>29180106604</td>
+<td>GLPS MADAPURA THANDYA</td>
+</tr><tr>
+<td>252</td>
+<td>MATHIGHATTA</td>
+<td>29180107302</td>
+<td>GLPS SORALAMAVU BOVI CALONY(NEW)</td>
+</tr><tr>
+<td>253</td>
+<td>MATHIGHATTA</td>
+<td>29180107102</td>
+<td>GLPS SYEDSAB PALYA</td>
+</tr><tr>
+<td>254</td>
+<td>MATHIGHATTA</td>
+<td>29180107201</td>
+<td>GLPS YELLANA HALLI</td>
+</tr><tr>
+<td>255</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180101001</td>
+<td>GHPS HARENAHALLI</td>
+</tr><tr>
+<td>256</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180104502</td>
+<td>GHPS HOSAHALLI</td>
+</tr><tr>
+<td>257</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180101101</td>
+<td>GHPS LAKSHMIPURA</td>
+</tr><tr>
+<td>258</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180105201</td>
+<td>GHPS NANDI HALLI</td>
+</tr><tr>
+<td>259</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180104701</td>
+<td>GHPS SEEGEBAGI GATE</td>
+</tr><tr>
+<td>260</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180101201</td>
+<td>GLPS GOPALAPURA</td>
+</tr><tr>
+<td>261</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180104503</td>
+<td>GLPS HOSAHALLI PALAYA</td>
+</tr><tr>
+<td>262</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180104704</td>
+<td>GLPS SEGEBAGI</td>
+</tr><tr>
+<td>263</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180121801</td>
+<td>GLPS THIMMALAPURA</td>
+</tr><tr>
+<td>264</td>
+<td>SEEGE BAGI GATE</td>
+<td>29180104702</td>
+<td>GLPS TORMANE</td>
+</tr><tr>
+<td>265</td>
+<td>SHETTYKERE</td>
+<td>29180114401</td>
+<td>GHPS HESARAHALLI</td>
+</tr><tr>
+<td>266</td>
+<td>SHETTYKERE</td>
+<td>29180113603</td>
+<td>GHPS KALLUBHAVIPALYA</td>
+</tr><tr>
+<td>267</td>
+<td>SHETTYKERE</td>
+<td>29180114201</td>
+<td>GHPS MADIHALLI</td>
+</tr><tr>
+<td>268</td>
+<td>SHETTYKERE</td>
+<td>29180113801</td>
+<td>GHPS SOMALAPURA</td>
+</tr><tr>
+<td>269</td>
+<td>SHETTYKERE</td>
+<td>29180114001</td>
+<td>GLPS AJJENA HALLI</td>
+</tr><tr>
+<td>270</td>
+<td>SHETTYKERE</td>
+<td>29180113604</td>
+<td>GLPS DASAGERE</td>
+</tr><tr>
+<td>271</td>
+<td>SHETTYKERE</td>
+<td>29180114501</td>
+<td>GLPS GOWDANA HALLI</td>
+</tr><tr>
+<td>272</td>
+<td>SHETTYKERE</td>
+<td>29180113901</td>
+<td>GLPS MAKU VALLI</td>
+</tr><tr>
+<td>273</td>
+<td>SHETTYKERE</td>
+<td>29180113902</td>
+<td>GLPS MAKU VALLI PALYA</td>
+</tr><tr>
+<td>274</td>
+<td>SHETTYKERE</td>
+<td>29180113601</td>
+<td>GMHPS SHETTYGERE</td>
+</tr><tr>
+<td>275</td>
+<td>THIMMANAHALLI</td>
+<td>29180121901</td>
+<td>GHPS ASHRIHALL</td>
+</tr><tr>
+<td>276</td>
+<td>THIMMANAHALLI</td>
+<td>29180110202</td>
+<td>GHPS GHANTENAHALLI</td>
+</tr><tr>
+<td>277</td>
+<td>THIMMANAHALLI</td>
+<td>29180110501</td>
+<td>GHPS JANEHAR</td>
+</tr><tr>
+<td>278</td>
+<td>THIMMANAHALLI</td>
+<td>29180110602</td>
+<td>GHPS KEMPARAYANA HATTI</td>
+</tr><tr>
+<td>279</td>
+<td>THIMMANAHALLI</td>
+<td>29180110101</td>
+<td>GHPS RAMANHALLI</td>
+</tr><tr>
+<td>280</td>
+<td>THIMMANAHALLI</td>
+<td>29180110601</td>
+<td>GLPS AJJI GUDDE</td>
+</tr><tr>
+<td>281</td>
+<td>THIMMANAHALLI</td>
+<td>29180121902</td>
+<td>GLPS ASHRIHALL GOLLARAHATTI</td>
+</tr><tr>
+<td>282</td>
+<td>THIMMANAHALLI</td>
+<td>29180110401</td>
+<td>GLPS HANUMANTHANA HALLI</td>
+</tr><tr>
+<td>283</td>
+<td>THIMMANAHALLI</td>
+<td>29180121504</td>
+<td>GLPS KATUMDEVARAHATTI</td>
+</tr><tr>
+<td>284</td>
+<td>THIMMANAHALLI</td>
+<td>29180110301</td>
+<td>GLPS SIDDANA KATTE</td>
+</tr><tr>
+<td>285</td>
+<td>THIMMANAHALLI</td>
+<td>29180121507</td>
+<td>GLPS THIMMANAHALLI</td>
+</tr><tr>
+<td>286</td>
+<td>THIMMANAHALLI</td>
+<td>29180121501</td>
+<td>GMHPS THIMMANAHALI</td>
+</tr><tr>
+<td>287</td>
+<td>THIRTHAPURA</td>
+<td>29180111201</td>
+<td>GHPS BARASIDALA HALLI</td>
+</tr><tr>
+<td>288</td>
+<td>THIRTHAPURA</td>
+<td>29180111301</td>
+<td>GHPS CHIKKARAMPURA</td>
+</tr><tr>
+<td>289</td>
+<td>THIRTHAPURA</td>
+<td>29180111401</td>
+<td>GHPS DODDARAMAPURA</td>
+</tr><tr>
+<td>290</td>
+<td>THIRTHAPURA</td>
+<td>29180111101</td>
+<td>GHPS KAATRIKE HAAL</td>
+</tr><tr>
+<td>291</td>
+<td>THIRTHAPURA</td>
+<td>29180111501</td>
+<td>GHPS SINGADAHALLI</td>
+</tr><tr>
+<td>292</td>
+<td>THIRTHAPURA</td>
+<td>29180111001</td>
+<td>GHPS THEERTHAPURA</td>
+</tr><tr>
+<td>293</td>
+<td>THIRTHAPURA</td>
+<td>29180111202</td>
+<td>GHS BARASIDLAHALLI</td>
+</tr><tr>
+<td>294</td>
+<td>THIRTHAPURA</td>
+<td>29180111003</td>
+<td>GHS THEERTHAPURA</td>
+</tr><tr>
+<td>295</td>
+<td>THIRTHAPURA</td>
+<td>29180111402</td>
+<td>GLPS DODDARAMPURA GOLLARAHATTI</td>
+</tr><tr>
+<td>296</td>
+<td>THIRTHAPURA</td>
+<td>29180111701</td>
+<td>GLPS KOTTIGAL</td>
+</tr><tr>
+<td>297</td>
+<td>THIRTHAPURA</td>
+<td>29180110901</td>
+<td>GLPS MADANA MADU</td>
+</tr><tr>
+<td>298</td>
+<td>THIRTHAPURA</td>
+<td>29180111601</td>
+<td>GLPS YARRE KATTE (THIRTHAPURA)</td>
+</tr><tr>
+<td>299</td>
+<td>YALANAADU</td>
+<td>29180103401</td>
+<td>GHPS BARAGIHALLI</td>
+</tr><tr>
+<td>300</td>
+<td>YALANAADU</td>
+<td>29180104801</td>
+<td>GHPS HULIYAR THAMMADIHALLI</td>
+</tr><tr>
+<td>301</td>
+<td>YALANAADU</td>
+<td>29180104804</td>
+<td>GHS HULIYAR THAMMADIHALLI</td>
+</tr><tr>
+<td>302</td>
+<td>YALANAADU</td>
+<td>29180102904</td>
+<td>GHS YALANADU</td>
+</tr><tr>
+<td>303</td>
+<td>YALANAADU</td>
+<td>29180104802</td>
+<td>GLPS BILIKALLU G.HATTI</td>
+</tr><tr>
+<td>304</td>
+<td>YALANAADU</td>
+<td>29180104901</td>
+<td>GLPS KERESURAGONDANA HALLI</td>
+</tr><tr>
+<td>305</td>
+<td>YALANAADU</td>
+<td>29180103101</td>
+<td>GLPS KORAGERE</td>
+</tr><tr>
+<td>306</td>
+<td>YALANAADU</td>
+<td>29180103202</td>
+<td>GLPS MARATI PALYA</td>
+</tr><tr>
+<td>307</td>
+<td>YALANAADU</td>
+<td>29180103302</td>
+<td>GLPS MOTI VADDARAHATTI</td>
+</tr><tr>
+<td>308</td>
+<td>YALANAADU</td>
+<td>29180103301</td>
+<td>GLPS MOTIHALLI</td>
+</tr><tr>
+<td>309</td>
+<td>YALANAADU</td>
+<td>29180103001</td>
+<td>GLPS SINGAPURA</td>
+</tr><tr>
+<td>310</td>
+<td>YALANAADU</td>
+<td>29180103102</td>
+<td>GLPS UPPARAHALLI</td>
+</tr><tr>
+<td>311</td>
+<td>YALANAADU</td>
+<td>29180102901</td>
+<td>GMHPS YALANADU</td>
+</tr>
+</tbody>
+</table>
+</div>
+</main>
+
+<footer>
+<h3>CHIKKANAYAKANAHALLI TALUK EDUCATIONAL PORTAL</h3>
+<p>ಚಿಕ್ಕನಾಯಕನಹಳ್ಳಿ ತಾಲ್ಲೂಕು | ತುಮಕೂರು ಜಿಲ್ಲೆ | ಕರ್ನಾಟಕ</p>
+</footer>
+
+<script>
+const clusterSelect = document.getElementById("cluster");
+const rows = Array.from(document.querySelectorAll("#schoolTable tbody tr"));
+
+const clusters = [...new Set(rows.map(r => r.cells[1].innerText.trim()))].sort();
+clusters.forEach(c => {
+    const option = document.createElement("option");
+    option.value = c;
+    option.textContent = c;
+    clusterSelect.appendChild(option);
+});
+
+function filterSchools() {
+    const q = document.getElementById("search").value.toLowerCase().trim();
+    const c = clusterSelect.value;
+    let visible = 0;
+
+    rows.forEach(row => {
+        const text = row.innerText.toLowerCase();
+        const cluster = row.cells[1].innerText.trim();
+        const ok = text.includes(q) && (!c || cluster === c);
+        row.style.display = ok ? "" : "none";
+        if (ok) visible++;
+    });
+
+    document.getElementById("count").innerText = visible;
+}
+</script>
+</body>
+</html>
